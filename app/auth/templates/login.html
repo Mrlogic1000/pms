@@ -1,0 +1,32 @@
+{% extends "auth_template.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block content %}
+<h1>Login</h1>
+ {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <ul class="flashes">
+                {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+<form action="" method="POST">
+    
+    <div class="row">
+        {{ form.username.label}}
+        {{ form.username}}
+       
+    </div>
+    <div class="row">
+         {{ form.password.label}}
+        {{ form.password}}
+    </div>
+    <input type="submit" value="submit">
+</form>
+{% endblock %}

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 1.5;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    /* background-color: red; */
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background-color: #ddd;
+    transform: translate(50%, -50%);
+
+}
+
+.form form {
+    display: grid;
+    padding: 20px;
+
+}
+
+.flashes {
+    margin: 10px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+h1 {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 2rem;
+    color: #222;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    /* Makes label take full width, stacking inputs below */
+    margin-bottom: 5px;
+    /* Adds space below the label */
+    font-weight: bold;
+    /* Makes label text bold */
+    color: #333;
+    /* Sets text color */
+}
+
+
+input[type="text"],
+input[type="email"],
+select,
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+    /* Remove default browser outline */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for valid inputs */
+input:valid {
+    border-color: green;
+}
+
+/* Styling for invalid inputs */
+input:invalid {
+    border-color: red;
+}
+
+/* Styling for placeholders */
+input::placeholder {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+}
+
+tr,
+th,
+td {
+    
+    padding: 5px;
+    text-align: center;
+
+}
+
+tr:nth-of-type(even){
+    background-color: #ddd;
+}
