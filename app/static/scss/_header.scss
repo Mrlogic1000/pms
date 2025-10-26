@@ -1,0 +1,35 @@
+.header {
+    grid-area: header;
+    background-color: skyblue;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+
+        .thumbs {
+            @include flext_center;
+            gap: 5px;
+            color: white;
+
+            .user {
+                @include flext_center;
+                color: white;
+                gap: 5px;
+
+                div {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    @include flext_center;
+                    background-color: $primary_color;
+
+
+                }
+            }
+        }
+
+    }
+}

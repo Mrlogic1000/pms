@@ -1,0 +1,155 @@
+.modal-layer {
+    // display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    height: 75vh;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.modal-head,
+.modal-footer {
+    @include flext_center;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+
+}
+
+.modal-head {
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.modal-footer {
+    font-size: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translate(-25%, -25%);
+
+}
+
+.modal-body {
+    flex: 1;
+    display: flex;
+    .img{
+        flex: 1;
+        // background-color: red;
+        background-image: url("{{url_for('static', filename='images/hotel2.jpg')}}");
+       
+    }
+}
+
+
+.modal-body {
+    .row {
+        display: flex;
+        gap: 20px;
+        margin: 10px;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        /* Ensures padding and border are included in the element's total width and height */
+    }
+
+    input[type="text"] {
+        background-color: #f0f0f0;
+    }
+
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        appearance: none;
+        /* Removes default browser styling, including the dropdown arrow */
+        -webkit-appearance: none;
+        /* For Webkit browsers */
+        -moz-appearance: none;
+        /* For Mozilla browsers */
+        background-color: #fff;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23444444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+        /* Custom dropdown arrow */
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        background-size: 16px;
+
+        &:focus {
+            border-color: rgba(0, 0, 0, 0.9);
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    background-color: orange;
+    justify-content: center;
+    gap: 50px;
+}
+
+.buttons .btn {
+    width: 20%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+
+/* Styling for specific input types */
+
+
+
+
+
+/* Styling for focus state */
+.modal-body input:focus {
+    border-color: #007bff;
+    outline: none;
+    /* Removes default browser outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.modal-body select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Styling for focus state */

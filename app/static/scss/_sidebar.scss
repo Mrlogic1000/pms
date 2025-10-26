@@ -1,0 +1,61 @@
+.sidebar {
+    grid-area: sidebar;
+    background-color: $primary_color;
+    transition: all 0.5s linear;
+    overflow: hidden;
+    width: 60px;
+    height: calc(100%-120px);
+
+    &:hover {
+        width: 230px;
+    }
+
+    .list {
+        height: 100%;
+
+
+        li {
+            color: white;
+            /* background-color: rgba(0, 0, 0, 0.8); */
+            line-height: 1.7;
+            font-size: 1rem;
+            padding: 1rem;
+            font-weight: bold;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.9);
+
+            }
+
+            a {
+                display: flex;
+                font-size: 14px;
+                align-items: center;
+                gap: 20px;
+            }
+
+            i {
+                font-size: 1.7em;
+                color: white;
+
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+
+
+
+    }
+}
+
+
+
+

@@ -10,6 +10,7 @@ class Config:
     MYSQL_USER = 'root'
     MYSQL_PASSWORD = ''
     MYSQL_DB = 'pms'
+    ASSETS_DEBUG = True
 
     # MAIL_SERVER= getenv('MAIL_SERVER')
     # MAIL_PORT = getenv('MAIL_PORT')

@@ -3,13 +3,21 @@ from flask import render_template, redirect, flash, url_for
 from ..extensions import mysql
 
 
-@admin.route('/pms')
-def pms():
+@admin.route('/reservation')
+def reservation():
     cur = mysql.connection.cursor()
-    cur.execute("SELECT guest.id,lastname,firstname,email,phonenumber,address,nationality,checkinDate,checkoutDate,paymentStatus FROM guest,booking WHERE guest.id = booking.guestID")
+    print(cur)
+    cur.execute("SELECT guest.id,firstname, lastname,email,phonenumber,address,nationality roomNumber,checkinDate,checkoutDate,paymentStatus,room_type.name " \
+    "FROM guest JOIN booking ON guest.id = booking.guestID " \
+    "JOIN rooms ON booking.roomID = rooms.id " \
+    "JOIN room_type ON rooms.roomTypeID = room_type.id")
+
     guests = cur.fetchall()
+    cur.execute("SELECT id, firstname, lastname from guest")
+    selects = cur.fetchall()
     cur.close()
-    for guest in guests:
-        print(guest)
     
-    return render_template("pms.html",guests=guests)
+    return render_template("reservation.html",guests=guests,selects = selects)
+@admin.route('/admin')
+def admin():
+    return render_template("admin.html")

@@ -1,0 +1,73 @@
+@mixin text {
+    padding: 10px;
+    text-align: left;
+}
+
+
+
+.search {
+    position: relative;
+    background-color: yellow;
+    width: 250px;
+    border-radius: 20px;
+
+    input[type="search"] {
+        background-color: #ddd;
+        padding: .7em;
+        width: 100%;
+        display: block;
+        height: 25px;
+        font-family: Georgia;
+        border-radius: 20px;
+        line-height: 3;
+        word-spacing: 20px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    i {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        font-size: 1rem;
+        /* bottom: 50%; */
+        transform: translate(50%, -50%);
+        opacity: 0.5;
+    }
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 98%;
+    margin: auto;
+
+    .table-header {
+        border-color: #ddd;
+        background-color: #ddd;
+    }
+
+
+    tr {
+        border: 1px solid #ddd;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+    }
+
+    tr,
+    th,
+    td {
+        @include text;
+    }
+
+
+
+
+}
+
+
+

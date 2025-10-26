@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/solid.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/brands.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
+   
 </head>
 
 <body>
@@ -42,39 +43,19 @@
 
         </div>
 
-        <div class="sidebar">
-            <div class="icons">
-                <ul>
-                    <li>
-                        <i class="fa-brands fa-web-awesome"></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-list"></i></i>
-                    </li>
+        <div class="sidebar" id="sidebar">
 
-                    <li>
-                        <i class="fa-solid fa-circle-user"></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-gear"></i></i>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-circle-user"></i>
-                    </li>
-                </ul>
-
-            </div>
-            <ul class="list">
-                <li><a href="#">walk in</a></li>
-                <li><a href="#">Reservation</a></li>
-                <li><a href="#">Reservation list</a></li>
-                <li><a href="#">New Booking</a></li>
-                <li><a href="#">Out of order</a></li>
-                <li><a href="#">Guest Ledger</a></li>
-                <li><a href="#">Arrival List</a></li>
-                <li><a href="#">Departure List</a></li>
-                <li><a href="#">Guest Database</a></li>
-                <li><a href="#">Guest Message</a></li>
+            <ul class="list" id="nav">
+                <li id="modal-open"><a href="#"><i class="fa-solid fa-list"></i><span>New Guest</span></a></li>
+                <li><a href="/reservation"><i class="fa-solid fa-list"></i><span>Reservation</span></a></li>
+                <li><a href="#"><i class="fa-brands fa-web-awesome"></i><span>Reservation list</span></a></li>
+                <li><a href="#"> <i class="fa-solid fa-circle-user"></i><span>New Booking</span></a></li>
+                <li><a href="#"> <i class="fa-solid fa-gear"></i><span>Out of order</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-user"></i><span>Guest Ledger</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-user"></i><span>Arrival List</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-user"></i><span>Departure List</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-user"></i><span>Guest Database</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-user"></i><span>Guest Message</span></a></li>
             </ul>
 
         </div>
@@ -83,6 +64,8 @@
         </div>
     </div>
 
+
 </body>
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
 
 </html>

@@ -1,0 +1,23 @@
+@import '_variables.scss';
+@import '_base.scss';
+@import '_utilities.scss';
+@import '_header.scss';
+@import '_page_nav.scss';
+@import '_sidebar.scss';
+@import '_page.scss';
+@import 'utilities/_modal.scss';
+
+.main {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    /* Defines three columns */
+    grid-template-rows: 60px 60px 1fr;
+    /* Defines three rows */
+    grid-template-areas:
+        "header header header"
+        "sidebar page-nav page-nav"
+        "sidebar content-page content-page";
+    height: 100vh;
+    /* background-color: blueviolet; */
+
+}

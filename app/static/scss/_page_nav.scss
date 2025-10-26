@@ -1,0 +1,9 @@
+.page-nav {
+    grid-area: page-nav;
+    @include box_shadow;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #ddd; */
+}
